@@ -1,0 +1,87 @@
+			<div class="content-div">
+					<div class="row">
+					  <div class="col-sm-4">
+					    <div class="card large">
+					      <div class="card-body">
+					      	<img src="./img/ruser.png" height="100" width="100">
+					        <h1 class="card-title" ng-repeat="user in reg_user">{{user.id}}</h1>
+					        <h3 class="card-text">Registered Users</h3>
+					        <p class="card-text">Our users, Our strength</p>
+					        
+					      </div>
+					    </div>
+					  </div>
+					  <div class="col-sm-4">
+					    <div class="card large">
+					      <div class="card-body">
+					      	<img src="./img/tip.png" height="100" width="100">
+					        <h1 class="card-title" ng-repeat="tip in tot_tip">{{tip.id}}</h1>
+					        <h3 class="card-text">Tips Submitted</h3>
+					        <p class="card-text">More tips, More accuracy</p>
+					        
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="col-sm-4">
+					    <div class="card large">
+					      <div class="card-body">
+					      	<img src="./img/scode.png" height="100" width="100">
+					        <h1 class="card-title" ng-repeat="code in tot_code">{{code.id}}</h1>
+					        <h3 class="card-text">Codes Submitted</h3>
+					        <p class="card-text">Providing convenience is our legacy</p>
+					        
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+					<div class="row" style="padding-top:3vw;">
+						<div class="col-md-6">
+							<div class="card">
+							  <div class="card-header">
+							    <h2>Recent Tips Added</h2>
+							  </div>
+							  <div class="card-body">
+							  	<div class="row">
+							  		<div class="col-md-7">
+							  			<ul class="list-group" ng-repeat="itr in tips">
+										  <li class="list-group-item" style="border-bottom:1px solid #e9ecef">{{itr.tip_heading}}</li>
+										</ul>
+							  		</div>
+							  		<div class="col-md-5">
+							  			<ul class="list-group" ng-repeat="itr in tips">
+							  				<li class="list-group-item" style="border-bottom:1px solid #e9ecef">{{itr.updatedAt}}</li>
+										</ul>
+							  		</div>
+							  	</div>
+							    
+							  </div>
+							</div>
+						</div>
+			
+						<div class="col-md-6">
+							<div class="card">
+							  <div class="card-header">
+							    <h2>Recent Code Added</h2>
+							  </div>
+							  <div class="card-body">
+							  	<div class="row">
+							  		<div class="col-md-7">
+							  			<ul class="list-group" ng-repeat="itr in codes">
+										  <li class="list-group-item" style="border-bottom:1px solid #e9ecef">{{itr.heading}}</li>
+										  
+										</ul>
+							  		</div>
+							  		<div class="col-md-5">
+							  			<ul class="list-group" ng-repeat="itr in codes">
+							  				<li class="list-group-item" style="border-bottom:1px solid #e9ecef">{{itr.updatedAt}}</li>
+										</ul>
+							  		</div>
+							  	</div>
+							    
+							  </div>
+							</div>
+						</div>
+					</div>
+			</div>

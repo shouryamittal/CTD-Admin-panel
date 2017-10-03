@@ -1,0 +1,20 @@
+<div class="tipApproval">
+	<div class="row">
+	<div class="col-md-6 mycard" ng-repeat="itr in allTips">
+		<div class="card">
+			<div class="card-header">
+				<h2>{{itr.tip_heading}} <span class="badge badge-secondary">{{itr.tip_language}}</span></h2>
+			</div>
+			<div class="card-body">
+				<ul class="list-group">
+					<li class="list-group-item">{{itr.tip_content}}</li>
+				</ul>			    
+			</div>
+			<div class="card-footer text-muted">
+			   <button type="button" class="btn btn-primary" ng-click="approve(itr.tip_heading,itr.tip_content,itr.author_name,itr.tip_language)">Approve</button>
+			   <button type="button" class="btn btn-danger" style="float:right" ng-click="deleteTip(itr.tip_heading)">Delete</button>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
