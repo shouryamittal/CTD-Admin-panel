@@ -1,10 +1,69 @@
+<link href="./css/style.css" rel="stylesheet">
 <div class="userAuthentication">
 	<div class="row">
-		<div class="col-md-6">
-			
+		<div class="col-md-offset-1 col-md-4">
+			<div class="card list" ng-click="show()">
+				<div class="card-block">
+					<div ng-show="display">
+						<div class="image">
+						</div>
+						<div class="tint">
+						</div>
+						<p class="allusers">ALL USERS</p>
+					</div>
+
+					<div ng-show="display1">
+						<div class="row" style="background-color:  #43B05F;margin-left: 0px;margin-right: 0px">
+							<div class="col-md-4">
+								<p class="username">USER NAME</p>
+							</div>
+							<div class="col-md-8">
+								<p class="emailid">EMAIL ID</p>
+							</div>
+						</div>
+
+						<div class="row" ng-repeat="user in user">
+							<div class="col-md-4">
+								<p class="userdata">{{user.fullname}}</p>
+							</div>
+
+							<div class="col-md-8">
+								<p class="userdata">{{user.email}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-6">
-			
+
+		<div class="col-md-offset-1 col-md-4">
+			<div class="card removeauser" ng-click="removeausershow()">
+				<div class="card-block">
+					<div ng-show="removeauserfront">
+						<div class="removeauserimage">
+						</div>
+						<div class="tint">
+						</div>
+						<p class="allusers">REMOVE USER</p>
+					</div>
+
+					<div ng-show="removeauserback">
+						<p class="text-center removeausertext">Enter Email id to delete!!!!</p>
+						<form style="margin-top: 35%;">
+							<div class="text-center" ng-show="errorshow">
+								<p class="errormsg">{{error}}</p>
+							</div>
+							<div class="form-group text-center">
+								<input type="email" placeholder="Enter email" ng-model="email">
+							</div>
+
+							<div class="text-center"> 
+								<button type="btn btn-md removebtn" ng-click="remove()">REMOVE</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

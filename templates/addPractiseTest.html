@@ -1,0 +1,184 @@
+<link href="./css/style.css" rel="stylesheet">
+<div class="container mycontainer1">
+	<ul class="nav nav-tabs nav-tabs1">
+		<li class="nav-item">
+			<a class="nav-link active" href="#tab1" ng-click="selected=1;activate=1;" ng-class="{active: selected==1;activate==1}" ng-init="selected=1;activate=1">HTML</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link" href="#tab2" ng-click="selected=2;activate=2" ng-class="{active: selected==2;activate==2}">CSS</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link" href="#tab3" ng-click="selected=3;activate=3" ng-class="{active: selected==3;activate==3}">JAVA</a>
+		</li>
+	</ul>
+
+	<div class="row">
+		<div class="col-md-8">
+			<form class="formtoaddques" id="tab1" ng-show="selected==1">
+				<div class="heading">
+					<p class="text-center">Enter HTML Questions</p>
+				</div>
+				<p class="text-center" style="margin-top: 10px;font-size: 12px;" ng-show="htmlerror">Enter all details!!!!</p>
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Enter Question" ng-model="question">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option1" ng-model="option1">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option2" ng-model="option2">
+				</div>		
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option3" ng-model="option3">
+				</div>		
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option4" ng-model="option4">
+				</div>	
+
+				<div class="row">
+					<div class="col-md-offset-5 col-md-3">
+						<button class="btn btn-lg btn-block submitbtn" ng-click="addHtmlQues()">ADD</button>
+					</div>
+				</div>		
+			</form>
+
+			<form class="formtoaddques" id="tab2" ng-show="selected==2">
+				<div class="heading">
+					<p class="text-center">Enter CSS Questions</p>
+				</div>
+				<p class="text-center" style="margin-top: 10px;font-size: 12px;" ng-show="csserror">Enter all details!!!!</p>
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Enter Question" ng-model="question">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option1" ng-model="option1">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option2"  ng-model="option2">
+				</div>		
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option3" ng-model="option3">
+				</div>		
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option4" ng-model="option4">
+				</div>	
+
+				<div class="row">
+					<div class="col-md-offset-5 col-md-3">
+						<button class="btn btn-lg btn-block submitbtn" ng-click="addCSSQues()">ADD</button>
+					</div>
+				</div>		
+			</form>
+
+			<form class="formtoaddques" id="tab3" ng-show="selected==3">
+				<div class="heading">
+					<p class="text-center">Enter JAVA Questions</p>
+				</div>
+				<p class="text-center" style="margin-top: 10px;font-size: 12px;" ng-show="javaerror">Enter all details!!!!</p>
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Enter Question" ng-model="question">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option1" ng-model="option1">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option2"  ng-model="option2">
+				</div>		
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option3" ng-model="option3">
+				</div>		
+
+				<div class="form-group">
+					<input type="text" class="form-control form-group1" placeholder="Option4" ng-model="option4">
+				</div>	
+
+				<div class="row">
+					<div class="col-md-offset-5 col-md-3">
+						<button class="btn btn-lg btn-block submitbtn" ng-click="addJavaQues()">ADD</button>
+					</div>
+				</div>		
+			</form>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card testPreview" ng-show="activate==1">
+				<div class="card-block">
+					<div class="card-title text-center">
+						<p class="testheading">HTML TEST</p>
+					</div>
+
+					<div class="card-content">
+						<div class="card quescard" ng-repeat="ques in htmlquestions">
+							<div class="card-block">
+								<div class="card-content content">
+									<p class="htmlques">Ques. {{ques.question}}</p>
+									<p>(i). {{ques.option1}}</p>
+									<p>(ii). {{ques.option2}}</p>
+									<p>(iii). {{ques.option3}}</p>
+									<p>(iv). {{ques.option4}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card testPreview" ng-show="activate==2">
+				<div class="card-block">
+					<div class="card-title text-center">
+						<p class="testheading">CSS TEST</p>
+					</div>
+
+					<div class="card-content">
+						<div class="card quescard" ng-repeat="ques in cssquestions">
+							<div class="card-block">
+								<div class="card-content content">
+									<p class="htmlques">Ques. {{ques.question}}</p>
+									<p>(i). {{ques.option1}}</p>
+									<p>(ii). {{ques.option2}}</p>
+									<p>(iii). {{ques.option3}}</p>
+									<p>(iv). {{ques.option4}}</p>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+			<div class="card testPreview" ng-show="activate==3">
+				<div class="card-block">
+					<div class="card-title text-center">
+						<p class="testheading">JAVA TEST</p>
+					</div>
+
+					<div class="card-content">
+						<div class="card quescard" ng-repeat="ques in javaquestions">
+							<div class="card-block">
+								<div class="card-content content">
+									<p class="htmlques">Ques. {{ques.question}}</p>
+									<p>(i). {{ques.option1}}</p>
+									<p>(ii). {{ques.option2}}</p>
+									<p>(iii). {{ques.option3}}</p>
+									<p>(iv). {{ques.option4}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

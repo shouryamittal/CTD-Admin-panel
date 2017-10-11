@@ -16,6 +16,7 @@ body,html
 	background-color: #43B05F;
 	font-family: 'Encode Sans Condensed', sans-serif;
 }
+
 .sidebar-buttons li
 {
 	margin-top: 2vw;
@@ -25,12 +26,13 @@ body,html
 	background-color: #43B05F;
 	color:white;
 
-
 }
+
 .sidebar-buttons li:hover
 {
 	color:#181830;
 }
+
 .space-div
 {
 	font-family: 'Encode Sans Condensed', sans-serif;
@@ -38,15 +40,18 @@ body,html
 	width:100%;
 	height:100%;
 }
+
 nav
 {
 	background-color: white;
 	font-size: 15px;
 }
+
 .bg-light
 {
 	background-color: white;
 }
+
 .content-div,.tipApproval,.userAuthentication
 {
 	width:100%;
@@ -98,4 +103,238 @@ nav
 .mycard
 {
 	margin-bottom:20px;
+}
+
+/* rmc css*/
+form
+{
+	font-size: 20px;
+}
+
+.form-group1
+{
+	margin-top: 2vw;
+}
+
+.language
+{
+	display: block;
+	height: 30px;
+	width: 100%;
+}
+
+.autoExpand
+{
+	margin-top: 2vw;
+}
+
+.form-group input
+{
+	border: 1px solid #181830;
+	color: #43B05F; 
+}
+
+.form-group textarea
+{
+	border: 1px solid #181830;
+	color: #43B05F; 
+}
+
+.form-group select
+{
+	border: 1px solid #181830;
+	color: #43B05F; 
+}
+
+input::placeholder
+{
+	font-size: 14px;
+  	color: #43B05F; 
+}
+
+textarea::placeholder
+{
+	font-size: 14px;
+  color: #43B05F; 
+}
+
+.rmcSubmitBtn
+{
+	color: white;
+	border: 4px solid #43B05F;
+	font-size: 16px; 
+	margin-bottom: 45px;
+}
+	
+/* addpractise test section*/
+.mycontainer1
+{
+	background-color: #f5f5f5;
+	height: 490px;
+	margin-left: -10px;
+}
+
+.nav-tabs1
+{
+	color: #43B05F;
+	font-size: 15px;
+}
+
+.formtoaddques
+{
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 20px;
+}
+
+.heading
+{
+	color: #43B05F;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 30px; 
+}
+
+.submitbtn
+{
+	background-color: #181830;
+	color: white;
+	border: 2px solid #43B05F;
+	font-size: 16px;
+
+}
+
+.submitbtn:hover
+{
+	color: #43B05F;
+}
+
+.testPreview
+{
+	border: 2px solid #181830;
+	margin: 30px;
+	height: 400px;
+	font-size:15px; 
+	overflow-y: auto; 
+}
+
+.testheading
+{
+	background-color: #43B05F;
+	color: white;
+	font-size: 20px;
+}
+
+.content
+{
+	padding-left: 10px;
+}
+
+.htmlques
+{
+	color: #43B05F;
+}
+
+.quescard
+{
+	border: none;
+}
+
+/* css related to user authenticatuion*/
+.list
+{
+	width: 339px;
+	height: 400px;
+	border: 1px solid #181830;
+}
+
+.image
+{
+	background: url('../img/user2.jpg') no-repeat;
+	background-size: cover;
+	width: 339px;
+	height: 400px;
+}
+
+.tint
+{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	background: linear-gradient(rgba(24,24,48,0.7),rgba(24,24,48,0.7));
+	height: 100%;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.allusers
+{
+	position: absolute;
+	top:160px;
+	left: 15%;
+	font-size: 40px;
+	color: white;
+}
+
+.display1
+{
+	border: 1px solid #181830;
+}
+
+.username
+{
+	color: white;
+	font-size: 16px;
+}
+
+.emailid
+{
+	color: white;
+	font-size: 16px;	
+}
+
+.userdata
+{
+	font-size: 15px;
+	color: #181830;
+	padding-left: 7px;
+	height: 400px;
+	overflow-y: auto;
+}
+
+.removeauser
+{
+	width: 339px;
+	height: 400px;
+	border: 1px solid #181830;
+}
+
+.removeauserimage
+{
+	background: url('../img/deleteuser1.png') no-repeat;
+	background-size: cover;
+	width:335px;
+	height: 360px;	
+	margin-top: 20px;
+}
+
+.removeausertext
+{
+	color: #43B05F;
+	font-size: 14px;
+	margin-top: 10%;
+}
+
+.removebtn
+{
+	background-color: #181830;
+	border: 1px solid #43B05F;
+	font-size: 13px;
+	color: #43B05F;
+}
+
+.errormsg
+{
+	color: #43B05F;
+	font-size: 14px;
 }
